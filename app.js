@@ -16,8 +16,7 @@ app.use('/', revewsRoutes)
 
 
 // connect to db
-mongoose.connect(`${process.env.DB}`, (r) => console.log('connected to DB', r))
-console.log("Database_URL", process.env.DATABASE_URL);
+mongoose.connect(process.env.DB, () => console.log('connected to DB'))
 
 // listen to server
 app.listen(process.env.PORT || 3000, () => console.log('listening to port'))
