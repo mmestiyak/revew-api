@@ -19,4 +19,4 @@ app.use('/', revewsRoutes)
 mongoose.connect(`${process.env.DB}`, (r) => console.log('connected to DB', r))
 
 // listen to server
-app.listen(3000, () => console.log('listening to port'))
+app.listen(process.env.PORT || 3000, () => console.log('listening to port'))
